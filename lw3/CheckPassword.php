@@ -1,11 +1,10 @@
 <?php
-
+header("Content-Type: text/plain");
 function getQueryStringParameter($name)
 {
     return isset($_GET[$name]) ? $_GET[$name] : null;
 }
 
-header("Content-Type: text/plain");
 $password = getQueryStringParameter('password');
 if ($password === null)
 {
@@ -64,6 +63,6 @@ else
             $repeated = $repeated + $val;
         }
     }
-    echo "$len $digitNumber $lowerNumber $upperNumber $lettersOnly $digitsOnly $repeated";
+//   echo "$len $digitNumber $lowerNumber $upperNumber $lettersOnly $digitsOnly $repeated";
     echo 'Password strength is ' . $strength = $len * 4 + $digitNumber * 4 + $lowerStrength + $upperStrength - $lettersOnly - $digitsOnly - $repeated;
 }
