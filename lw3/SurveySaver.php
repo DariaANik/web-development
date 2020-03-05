@@ -35,14 +35,14 @@ if (!file_exists($dir))
     mkdir($dir, 0777, false);
 }
 $email = getQueryStringParameter('email');
-$firstName = getQueryStringParameter('first_name');
-$lastName = getQueryStringParameter('last_name');
-$age = getQueryStringParameter('age');
+//$firstName = ;
+//$lastName = ;
+//$age = ;
 $surveyInfo = [
     'email' => $email,
-    'first_name' => $firstName,
-    'last_name' => $lastName,
-    'age' => $age
+    'first_name' => getQueryStringParameter('first_name'),
+    'last_name' => getQueryStringParameter('last_name'),
+    'age' => getQueryStringParameter('age')
 ];
 if ($email === null)
 {
