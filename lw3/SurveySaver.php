@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: text/plain");
+
 function getQueryStringParameter($name)
 {
     return isset($_GET[$name]) ? $_GET[$name] : null;
