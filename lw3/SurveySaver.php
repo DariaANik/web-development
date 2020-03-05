@@ -60,20 +60,11 @@ if ($emailCheck) {
     $filename = "data/$email.txt";
 }
 if (file_exists($filename)) {
-    $fileNew = false;
-}
-if ((!file_exists($filename)) && ($emailCheck))
-{
-    fopen($filename, "w");
-    $fileNew = true;
-}
-
-if ($fileNew) {
-    Object2File($surveyInfo, $filename);
-}
-else
-{
     $infoFromFile = ObjectFromFile($filename);
     $infoRefreshed = MergeFileInfo($surveyInfo, $infoFromFile);
     Object2File($infoRefreshed, $filename);
+}
+if ((!file_exists($filename)) && ($emailCheck))
+{
+    Object2File($surveyInfo, $filename);
 }
