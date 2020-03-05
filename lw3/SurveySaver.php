@@ -36,9 +36,6 @@ if (!file_exists($dir))
     mkdir($dir, 0777, false);
 }
 $email = getQueryStringParameter('email');
-//$firstName = ;
-//$lastName = ;
-//$age = ;
 $surveyInfo = [
     'email' => $email,
     'first_name' => getQueryStringParameter('first_name'),
