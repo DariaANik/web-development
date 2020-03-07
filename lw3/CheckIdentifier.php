@@ -5,32 +5,19 @@ function getQueryStringParameter($name)
     return isset($_GET[$name]) ? $_GET[$name] : null;
 }
 $identifier = getQueryStringParameter('identifier');
-$flag = 0;
 if ($identifier === null)
 {
-    $flag = 3;
+    echo "Not found";
 }
 elseif (!ctype_alpha($identifier[0]))
 {
-    $flag = 1;
+    echo "Not identifier. The first character is incorrect";
 }
 elseif (!ctype_alnum($identifier))
 {
-    $flag = 2;
+    echo "Not identifier. Contains incorrect characters";
 }
-
-switch ($flag)
+else
 {
-    case 0:
-        echo "Identifier";
-        break;
-    case 1:
-        echo "Not identifier. The first character is incorrect";
-        break;
-    case 2:
-        echo "Not identifier. Contains incorrect characters";
-        break;
-    case 3:
-        echo "Not found";
-        break;
+    echo "Identifier";
 }
