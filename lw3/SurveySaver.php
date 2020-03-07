@@ -47,12 +47,19 @@ if ($email === null)
     echo 'Please enter your email address';
     $emailCheck = false;
 }
-elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+elseif (preg_match("~.*[+|<\\\>\"?*:/].*~", $email) > 0) //наличие символов, которые не могут быть в имени файла
+{
+    $emailCheck = false;
+    echo 'Email is incorrect';
+}
+elseif (filter_var($email, FILTER_VALIDATE_EMAIL))
+{
     $emailCheck = true;
+    echo 'Email ok';
 }
 else {
-    echo 'Email is incorrect';
     $emailCheck = false;
+    echo 'Email is incorrect';
 }
 if ($emailCheck) {
     $filename = "data/$email.txt";
