@@ -1,9 +1,11 @@
 <?php
-header("Content-Type: text/plain");
-function getQueryStringParameter($name)
+
+function getQueryStringParameter(string $name): ?string
 {
     return isset($_GET[$name]) ? $_GET[$name] : null;
 }
+
+header("Content-Type: text/plain");
 $strText = getQueryStringParameter('text');
 if ($strText === null)
 {
@@ -12,6 +14,6 @@ if ($strText === null)
 else
 {
     $trimmed = trim($strText);
-    $strText2 = preg_replace("~\s+~", " ", $trimmed);
-    echo $strText2;
+    $strTextNew = preg_replace("/\s+/", " ", $trimmed);
+    echo $strTextNew;
 }
