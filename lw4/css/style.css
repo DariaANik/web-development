@@ -1,0 +1,320 @@
+body
+{
+    margin: 0;
+}
+.background
+{
+    margin-bottom: 42px;
+    background-image: url("../images/1.png");
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.top_menu
+{
+    width: 1000px;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    height: 50px;
+    font-size: 0;
+}
+
+.nav_bar
+{
+    margin: 0 auto;
+    display: inline-block;
+    height: 50px;
+    float: none;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav_bar_menu
+{
+    display: inline-block;
+}
+
+.nav_bar_button, .nav_bar_button:visited, .nav_bar_button:active
+{
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 15px 21px 15px;
+    font: 19px 'Georgia';
+    color: #333333;
+    text-decoration: none;
+}
+
+.nav_bar_button:hover
+{
+    background: #15a98c;
+    text-decoration-color: #f5f5f5;
+    color: #f5f5f5;
+}
+
+.about:before
+{
+    content: url('../images/about_me_icon.png');
+}
+
+.about:hover:before
+{
+    content: url('../images/about_me_icon_hover.png');
+}
+
+.hobby:before
+{
+    content: url('../images/hobby_icon.png');
+}
+
+.hobby:hover:before
+{
+    content: url('../images/hobby_icon_hover.png');
+}
+
+.video:before
+{
+    content: url('../images/video_icon.png');
+}
+
+.video:hover:before
+{
+    content: url('../images/video_icon_hover.png');
+}
+
+.main_block
+{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block;
+}
+
+.photo
+{
+    width: 330px;
+    margin-top: 210px;
+    display: block;
+    float: left;
+    border-radius: 5px;
+}
+
+.quote
+{
+    display: block;
+    float: left;
+    width: 570px;
+    margin: 234px 0 50px 66px;
+}
+
+.quote_text
+{
+    font: 28px/1.5 Georgia;
+    color: #ffffff;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+cite.author
+{
+    font: 600 16px/1.5 'Open Sans', sans-serif;
+    color: #f5f5f5;
+}
+
+.header
+{
+    display: block;
+    float: left;
+    margin: 0 0
+    0 60px;
+}
+
+.top_block
+{
+    margin: 0;
+    display: block;
+}
+
+.bottom_block
+{
+    display: block;
+    margin: 0;
+}
+
+.lists
+{
+    width: 330px;
+    display: block;
+    margin: 44px 0 0 0;
+    float: left;
+}
+
+.info
+{
+    display: block;
+    margin: 8px 0 0 60px;
+    float: left;
+    width: 570px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.green_line
+{
+    width: 60px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #15a98c;
+    margin-top: 28px;
+}
+
+.main_header
+{
+    font: 700 48px/1 'Open Sans', sans-serif;
+    color: #333333;
+    margin: 0;
+}
+
+.dark_header
+{
+    font: 400 34px 'Open Sans';
+    color: #333333;
+    margin: 38px 0 13px;
+    letter-spacing: 1.2px;
+}
+
+.green_header
+{
+    font: 600 24px 'Open Sans';
+    color: #15a98c;
+    margin: 0 0 12px;
+}
+
+.link
+{
+    font: 19px Georgia;
+    color: #15a98c;
+    position: relative;
+    margin-top: 55px;
+    /*display: block;*/
+}
+
+.link:after
+{
+    content: "→";
+    /*display: block;*/
+    position: absolute;
+    left: 120px;
+}
+
+a:visited
+{
+    color: #000000;
+}
+
+.text
+{
+    font: 19px/1.69 "Georgia";
+    margin: 0;
+    color: #555555;
+}
+
+.info > p:last-of-type
+{
+    margin-bottom: 48px;
+}
+
+.list_text
+{
+    font: 19px/1.9 "Georgia";
+    margin: 0 0 41px;
+    color: #555555;
+    padding-left: 19px;
+}
+
+.movie_block
+{
+    width: 1200px;
+    margin-left: 330px;
+    padding-top: 56px;
+    font-size: 0;
+}
+
+.dark_header_movies
+{
+    font: 400 34px 'Open Sans';
+    color: #333333;
+    margin: 40px 0 31px;
+    letter-spacing: 1.5px;
+}
+
+.movie_card
+{
+    width: 285px;
+    margin-right: 20px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.movie_title
+{
+    font: 700 22px 'Open Sans', sans-serif;
+    color: #333333;
+    text-align: left;
+    margin: 0;
+}
+
+.movie_description
+{
+    font: 16px/1.77 'Georgia';
+    color: #555555;
+    margin: 17px 0;
+}
+
+.movie_image
+{
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.no_right_margin
+{
+    margin-right: 0;
+}
+
+.button
+{
+    margin: 60px auto 75px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: #15a98c;
+    color: #f5f5f5;
+    font: 19px 'Georgia';
+    display: block;
+}
+
+.footer
+{
+    width: 100%;
+    height: 70px;
+    background-color: #e8e8e8;
+    display: flex;
+}
+
+.footer_text
+{
+    font: 16px 'Georgia';
+    color: #555555;
+    margin: auto;
+}
+форматирование, классы, посмотреть все, скинуть
