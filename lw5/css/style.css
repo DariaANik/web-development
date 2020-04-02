@@ -291,6 +291,11 @@ body
     display: block;
 }
 
+.movie_button:hover
+{
+    background-color: #098d71;
+}
+
 .footer
 {
     width: 100%;
