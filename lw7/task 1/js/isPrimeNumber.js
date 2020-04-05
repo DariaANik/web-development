@@ -4,35 +4,36 @@ isPrimeNumber(n);
 function isPrimeNumber(n) {
     let arrayToCheck = [];
     if (!Array.isArray(n)) {
-        arrayToCheck[0] = n;
+        arrayToCheck = [n];
     } else {
         arrayToCheck = n;
     }
     for (let i = 0; i < arrayToCheck.length; i++) {
-        isPrimeCheck(arrayToCheck[i]);
+        if (typeof(arrayToCheck[i]) == 'number') {
+            if (isPrimeCheck(arrayToCheck[i])) {
+                console.log(arrayToCheck[i], 'is a prime number')
+            } else {
+                console.log(arrayToCheck[i], 'is not a prime number')
+            }
+        } else {
+            console.log(arrayToCheck[i], 'is not a number');
+        }
+
     }
 }
 
 function isPrimeCheck(item) {
     let isPrime;
-    if (typeof(item) == 'number') {
-        if (item < 2) {
-            isPrime = false;
-        } else {
-            isPrime = true;
-            for (let i = 2; i < item; i++) {
-                if (item % i === 0) {
-                    isPrime = false;
-                    break;
-                }
+    if (item < 2) {
+        isPrime = false;
+    } else {
+        isPrime = true;
+        for (let i = 2; i < item; i++) {
+            if (item % i === 0) {
+                isPrime = false;
+                break;
             }
         }
-        if (isPrime) {
-            console.log(item, 'is a prime number')
-        } else {
-            console.log(item, 'is not a prime number')
-        }
-    } else {
-        console.log(item, 'is not a number')
     }
+    return isPrime;
 }
