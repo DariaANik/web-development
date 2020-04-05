@@ -1,33 +1,38 @@
 let n = [1, 2, 3, 4, 5, '%', 10, 8, 0, -73];
-if (Array.isArray(n)) {
-    for (let i = 0; i < n.length; i++) {
-        isPrimeNumber(n[i]);
-    }
-} else {
-    isPrimeNumber(n);
-}
+isPrimeNumber(n);
 
 function isPrimeNumber(n) {
+    let arrayToCheck = [];
+    if (!Array.isArray(n)) {
+        arrayToCheck[0] = n;
+    } else {
+        arrayToCheck = n;
+    }
+    for (let i = 0; i < arrayToCheck.length; i++) {
+        isPrimeCheck(arrayToCheck[i]);
+    }
+}
+
+function isPrimeCheck(item) {
     let isPrime;
-    if (typeof(n) == 'number') {
-        if (n < 2) {
+    if (typeof(item) == 'number') {
+        if (item < 2) {
             isPrime = false;
         } else {
             isPrime = true;
-            for (let i = 2; i < n; i++) {
-                if (n % i === 0) {
+            for (let i = 2; i < item; i++) {
+                if (item % i === 0) {
                     isPrime = false;
                     break;
                 }
             }
         }
         if (isPrime) {
-            console.log(n, 'is a prime number')
+            console.log(item, 'is a prime number')
         } else {
-            console.log(n, 'is not a prime number')
+            console.log(item, 'is not a prime number')
         }
     } else {
-        console.log(n, 'is not a number')
+        console.log(item, 'is not a number')
     }
 }
-
