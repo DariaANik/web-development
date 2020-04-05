@@ -2,7 +2,7 @@ let n = [1, 2, 3, 4, 5, '%', 10, 8, 0, -73];
 isPrimeNumber(n);
 
 function isPrimeNumber(n) {
-    let arrayToCheck = [];
+    let arrayToCheck;
     if (Array.isArray(n)) {
         arrayToCheck = n;
     } else {
