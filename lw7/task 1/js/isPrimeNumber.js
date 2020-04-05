@@ -3,22 +3,22 @@ isPrimeNumber(n);
 
 function isPrimeNumber(n) {
     let arrayToCheck = [];
-    if (!Array.isArray(n)) {
-        arrayToCheck = [n];
-    } else {
+    if (Array.isArray(n)) {
         arrayToCheck = n;
+    } else {
+        arrayToCheck = [n];
     }
     for (let i = 0; i < arrayToCheck.length; i++) {
-        if (typeof(arrayToCheck[i]) == 'number') {
-            if (isPrimeCheck(arrayToCheck[i])) {
-                console.log(arrayToCheck[i], 'is a prime number')
+        let element = arrayToCheck[i];
+        if (typeof(element) == 'number') {
+            if (isPrimeCheck(element)) {
+                console.log(element, 'is a prime number')
             } else {
-                console.log(arrayToCheck[i], 'is not a prime number')
+                console.log(element, 'is not a prime number')
             }
         } else {
-            console.log(arrayToCheck[i], 'is not a number');
+            console.log(element, 'is not a number');
         }
-
     }
 }
 
