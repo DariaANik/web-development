@@ -1,4 +1,4 @@
-let n = 0; //[1, 2, 3, 4, 5, '%', 10, 8, 0, -73];
+let n = [1, 2, 3, 4, 5, '%', 10, 8, 0, -73];
 if (Array.isArray(n)) {
     for (let i = 0; i < n.length; i++) {
         isPrimeNumber(n[i]);
