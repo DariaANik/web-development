@@ -23,6 +23,8 @@ body
     padding: 0;
     list-style-type: none;
     font-size: 0;
+    position: relative;
+    left: 30px;
 }
 
 .nav_bar_menu
@@ -78,35 +80,39 @@ body
 
 .background
 {
-    background-image: url("../images/background.png");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 400px;
+    background: url("../images/background.png")
+                no-repeat
+                top left;
+    min-height: 400px;
 }
 
 .intro
 {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .photo
 {
-    width: 330px;
-    margin: 210px 60px 0 0;
-    display: block;
-    float: left;
+    margin: 0 60px 0 30px;
+    flex: none;
     border-radius: 5px;
+    position: relative;
+    bottom: -210px;
+    width: 330px;
+    height: 350px;
+    align-self: center;
 }
 
 .quote
 {
-    width: 570px;
+    max-width: 570px;
     margin: 234px 0 0;
-    display: block;
-    float: left;
 }
 
 .quote_text
@@ -144,23 +150,28 @@ body
     height: 6px;
     border-radius: 6px;
     background-color: #15a98c;
-    margin-top: 28px;
+    margin: 28px 0 43px;
 }
 
 .main_block
 {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
-    display: block;
+    display: flex;
+    flex-direction: row;
 }
 
 .lists
 {
-    width: 330px;
-    display: block;
+    min-width: 330px;
+    display: flex;
+    flex-direction: column;
     margin: 44px 0 0 0;
-    float: left;
+    position: relative;
+    top: 160px;
+    left: 30px;
+
 }
 
 .green_header
@@ -180,10 +191,9 @@ body
 
 .info
 {
-    display: block;
-    margin: 8px 0 0 60px;
-    float: left;
-    width: 570px;
+    display: flex;
+    flex-direction: column;
+    margin: 42px 0 0 89px;
 }
 
 .dark_header
@@ -203,7 +213,7 @@ body
 
 .info > .text:last-of-type
 {
-    margin-bottom: 48px;
+    margin-bottom: 49px;
 }
 
 .link
@@ -211,7 +221,6 @@ body
     font: 19px 'Georgia';
     color: #15a98c;
     position: relative;
-    margin-top: 55px;
 }
 
 .link:after
@@ -228,53 +237,60 @@ body
 
 .movie_block
 {
-    width: 1200px;
-    margin: 0 auto 75px ;
-    padding-top: 56px;
-    font-size: 0;
+    margin: 66px auto 70px ;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
 }
 
 .dark_header_movies
 {
     font: 400 34px 'Open Sans';
     color: #333333;
-    margin: 40px 0 31px;
+    margin-bottom: 32px;
     letter-spacing: 1.5px; /*если округлить, будет отличаться от макета*/
+}
+
+.cards
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -20px;
 }
 
 .movie_card
 {
     width: 285px;
-    margin-right: 20px;
+    margin-left: 20px;
     padding: 0;
-    display: inline-block;
-    vertical-align: top;
 }
 
 .movie_title
 {
-    font: 700 22px 'Open Sans', sans-serif;
+    font: 700 22px/1.75 'Open Sans', sans-serif;
     color: #333333;
     text-align: left;
-    margin: 0;
+    margin: 0 0 13px 0;
 }
 
 .movie_description
 {
-    font: 16px/1.77 'Georgia';
+    font: 16px/1.75 'Georgia';
     color: #555555;
-    margin: 17px 0;
+    margin: 0;
 }
 
 .movie_image
 {
-    margin-bottom: 25px;
+    margin-bottom: 17px;
     border-radius: 5px;
 }
 
 .movie_button
 {
-    margin: 60px auto;
+    margin: 82px auto 0;
     width: 220px;
     height: 50px;
     border-radius: 5px;
@@ -284,6 +300,8 @@ body
     color: #f5f5f5;
     font: 19px 'Georgia';
     display: block;
+    position: relative;
+    left: -11px;
 }
 
 .movie_button:hover
