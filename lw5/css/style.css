@@ -296,9 +296,7 @@ body
     border: 0;
     cursor: pointer;
     background-color: #15a98c;
-    color: #f5f5f5;
-    font: 19px 'Georgia';
-    display: block;
+    display: flex;
     position: relative;
     left: -11px;
 }
@@ -306,6 +304,13 @@ body
 .movie_button:hover
 {
     background-color: #098d71;
+}
+
+.movie_button_name
+{
+    color: #f5f5f5;
+    font: 19px 'Georgia';
+    margin: auto;
 }
 
 .footer
