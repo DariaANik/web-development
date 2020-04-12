@@ -83,7 +83,6 @@ body
     background: url("../images/background.png")
                 no-repeat
                 top left;
-    min-height: 400px;
 }
 
 .intro
@@ -112,7 +111,7 @@ body
 .quote
 {
     max-width: 570px;
-    margin: 234px 0 0;
+    margin: 234px 0 41px 0;
 }
 
 .quote_text
