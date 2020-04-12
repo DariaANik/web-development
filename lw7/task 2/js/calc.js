@@ -4,9 +4,9 @@ function calc(expr) {
     let isCalc = true;
     let correctLength = true;
     console.log('Вычислить выражение', expr);
-    expr = expr.replace(/[()]+/g, '');
+    expr = expr.replace(/[()]+/g, ' ');
     expr = expr.trim();
-    const reg = RegExp(/^[(\+\*\/-]+[\d\s\+\*\/\-\(\)]+[\d\)]+$/g);
+    const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-]+[\d]+$/g);
     correctExpr = reg.test(expr);
     if (correctExpr) {
         expr = expr.replace(/\s{2,}/g, ' ');
