@@ -1,6 +1,6 @@
 function calc(expr) {
     let signs = ['+', '-', '*', '/'];
-    let correctExpr = false;
+    let correctExpr;
     let isCalc = true;
     let correctLength = true;
     console.log('Вычислить выражение', expr);
