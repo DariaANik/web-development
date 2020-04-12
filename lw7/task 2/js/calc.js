@@ -1,4 +1,4 @@
-calc('+ 6 + +');
+calc('+ 6.2 5.5');
 function calc(expr) {
     let signs = ['+', '-', '*', '/'];
     let isCorrectExpr;
@@ -7,7 +7,7 @@ function calc(expr) {
     console.log('Вычислить выражение', expr);
     expr = expr.replace(/[()]+/g, ' ');
     expr = expr.trim();
-    const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-]+[\d]+$/g);
+    const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-(\d+\.\d*)]+[\d(\d+\.\d*)]+$/g);
     isCorrectExpr = reg.test(expr);
     if (isCorrectExpr) {
         expr = expr.replace(/\s{2,}/g, ' ');
@@ -20,7 +20,7 @@ function calc(expr) {
         isCalc = false; // флаг, производились ли вычисления в этом проходе
         for (let i = 0; i < expr.length - 2; i++) {
             let element = expr[i];
-            if (signs.includes(element) && (!isNaN(parseInt(expr[i + 1]))) && (!isNaN(parseInt(expr[i + 2])))) {
+            if (signs.includes(element) && (!isNaN(parseFloat(expr[i + 1]))) && (!isNaN(parseFloat(expr[i + 2])))) {
                 let sign = element;
                 let n1 = Number(expr[i + 1]);
                 let n2 = Number(expr[i + 2]);
