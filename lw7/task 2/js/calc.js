@@ -1,21 +1,22 @@
+calc('+ 6 + +');
 function calc(expr) {
     let signs = ['+', '-', '*', '/'];
-    let correctExpr;
+    let isCorrectExpr;
     let isCalc = true;
-    let correctLength = true;
+    let isCorrectLength = true;
     console.log('Вычислить выражение', expr);
     expr = expr.replace(/[()]+/g, ' ');
     expr = expr.trim();
     const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-]+[\d]+$/g);
-    correctExpr = reg.test(expr);
-    if (correctExpr) {
+    isCorrectExpr = reg.test(expr);
+    if (isCorrectExpr) {
         expr = expr.replace(/\s{2,}/g, ' ');
         expr = expr.split(' ');
         if (expr.length < 3) {
-            correctLength = false;
+            isCorrectLength = false;
         }
     }
-    while ((expr.length > 2) && (isCalc) && (correctExpr) && (correctLength)) {
+    while ((expr.length > 2) && (isCalc) && (isCorrectExpr) && (isCorrectLength)) {
         isCalc = false; // флаг, производились ли вычисления в этом проходе
         for (let i = 0; i < expr.length - 2; i++) {
             let element = expr[i];
@@ -29,11 +30,11 @@ function calc(expr) {
             }
         }
     }
-    if ((expr.length = 1) && (isCalc) && (correctExpr) && (correctLength)) {
+    if ((expr.length = 1) && (isCalc) && (isCorrectExpr) && (isCorrectLength)) {
         console.log('Результат', expr[0]);
-    } else if (!correctExpr) {
+    } else if (!isCorrectExpr) {
         console.log('Некорректные символы / некорректный порядок ввода значений.');
-    } else if (!correctLength) {
+    } else if (!isCorrectLength) {
         console.log('Введите не меньше трех значений в формате знак число число.');
     } else {
         console.log('Ошибка вычислений. Некорректное выражение.');
