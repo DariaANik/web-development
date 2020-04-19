@@ -10,7 +10,7 @@ function calc(expr) {
     if (typeof expr === 'string') {
         expr = expr.replace(/[()]+/g, ' ');
         expr = expr.trim();
-        const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-(\d+\.\d*)]+[\d(\d+\.\d*)]+$/g);
+        const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-(\d+\.\d*)]+\d$/g);
         isCorrectExpr = reg.test(expr);
     } else {
         isCorrectExpr = false;
