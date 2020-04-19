@@ -1,14 +1,20 @@
-calc('+ 6.2 5.5');
 function calc(expr) {
+    console.log('Калькулятор поддерживает операции + - * /. Унарный минус не поддерживается.');
+    console.log('Формат ввода: знак пробел число пробел число. Вместо чисел можно подставить выражение аналогичного формата.');
+    console.log('Возможно использование скобок, на результат вычислений не влияют.');
     let signs = ['+', '-', '*', '/'];
     let isCorrectExpr;
     let isCalc = true;
     let isCorrectLength = true;
     console.log('Вычислить выражение', expr);
-    expr = expr.replace(/[()]+/g, ' ');
-    expr = expr.trim();
-    const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-(\d+\.\d*)]+[\d(\d+\.\d*)]+$/g);
-    isCorrectExpr = reg.test(expr);
+    if (typeof expr === 'string') {
+        expr = expr.replace(/[()]+/g, ' ');
+        expr = expr.trim();
+        const reg = RegExp(/^[\+\*\/-]+[\d\s\+\*\/\-(\d+\.\d*)]+[\d(\d+\.\d*)]+$/g);
+        isCorrectExpr = reg.test(expr);
+    } else {
+        isCorrectExpr = false;
+    }
     if (isCorrectExpr) {
         expr = expr.replace(/\s{2,}/g, ' ');
         expr = expr.split(' ');
@@ -16,7 +22,7 @@ function calc(expr) {
             isCorrectLength = false;
         }
     }
-    while ((expr.length > 2) && (isCalc) && (isCorrectExpr) && (isCorrectLength)) {
+    while ((isCalc) && (isCorrectExpr) && (isCorrectLength) && (expr.length > 2)) {
         isCalc = false; // флаг, производились ли вычисления в этом проходе
         for (let i = 0; i < expr.length - 2; i++) {
             let element = expr[i];
@@ -24,13 +30,18 @@ function calc(expr) {
                 let sign = element;
                 let n1 = Number(expr[i + 1]);
                 let n2 = Number(expr[i + 2]);
-                expr[i] = calcArithm(sign, n1, n2);
-                expr.splice(i + 1, 2);
-                isCalc = true;
+                if (calcArithm(sign, n1, n2)) {
+                    expr[i] = calcArithm(sign, n1, n2);
+                    expr.splice(i + 1, 2);
+                    isCalc = true;
+                } else {
+                    isCalc = false;
+                    break;
+                }
             }
         }
     }
-    if ((expr.length = 1) && (isCalc) && (isCorrectExpr) && (isCorrectLength)) {
+    if ((isCalc) && (isCorrectExpr) && (isCorrectLength) && (expr.length = 1)) {
         console.log('Результат', expr[0]);
     } else if (!isCorrectExpr) {
         console.log('Некорректные символы / некорректный порядок ввода значений.');
@@ -44,5 +55,11 @@ function calcArithm(sign, n1, n2) {
     if (sign === '+') return n1 + n2;
     if (sign === '-') return n1 - n2;
     if (sign === '*') return n1 * n2;
-    if (sign === '/') return n1 / n2;
+    if (sign === '/') {
+        if (n2 === 0) {
+            return false
+        } else {
+            return n1 / n2;
+        }
+    }
 }
