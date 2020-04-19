@@ -10,7 +10,7 @@ body
 
 .top_menu
 {
-    width: 1000px;
+    max-width: 960px;
     height: 50px;
     margin: 0 auto;
     display: block;
@@ -24,7 +24,7 @@ body
     list-style-type: none;
     font-size: 0;
     position: relative;
-    left: 30px;
+    left: 12px;
 }
 
 .nav_bar_menu
@@ -36,9 +36,10 @@ body
 {
     display: block;
     text-align: center;
-    padding: 14px 21px 15px;
+    padding: 13px 20px 11px 19px;
     font: 19px 'Georgia';
-    color: #333333;
+    line-height: 26px;
+    color: #333;
     text-decoration: none;
 }
 
@@ -48,9 +49,16 @@ body
     color: #f5f5f5;
 }
 
+.hobby
+{
+    padding-left: 21px;
+}
+
 .about:before
 {
     content: url('../images/about_me_icon.png');
+    line-height: 26px;
+    padding-right: 11px;
 }
 
 .about:hover:before
@@ -61,6 +69,8 @@ body
 .hobby:before
 {
     content: url('../images/hobby_icon.png');
+    line-height: 26px;
+    padding-right: 11px;
 }
 
 .hobby:hover:before
@@ -71,6 +81,8 @@ body
 .video:before
 {
     content: url('../images/video_icon.png');
+    line-height: 26px;
+    padding-right: 11px;
 }
 
 .video:hover:before
@@ -80,29 +92,27 @@ body
 
 .background
 {
-    background: url("../images/background.png")
-                no-repeat
-                top left;
+    background: url("../images/background.png") no-repeat top left;
 }
 
 .intro
 {
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
+    padding-left: 23px;
 }
 
 .photo
 {
-    margin: 0 60px 0 30px;
+    margin: 0 60px 0 0;
     flex: none;
     border-radius: 5px;
     position: relative;
-    bottom: -210px;
+    bottom: -185px;
     width: 330px;
     height: 350px;
     align-self: center;
@@ -111,12 +121,12 @@ body
 .quote
 {
     max-width: 570px;
-    margin: 234px 0 41px 0;
+    margin: 234px 0 43px 0;
 }
 
 .quote_text
 {
-    font: 28px/1.5 'Georgia';
+    font: 28px/1.47 'Georgia';
     color: #ffffff;
     font-style: italic;
     margin: 0;
@@ -125,21 +135,15 @@ body
 
 .author
 {
-    font: 600 16px/1.5 'Open Sans', sans-serif;
+    font: 600 16px/1.47 'Open Sans', sans-serif;
     color: #f5f5f5;
-}
-
-.header
-{
-    display: block;
-    float: left;
-    margin: 42px 0 0;
+    padding-left: 5px;
 }
 
 .main_header
 {
     font: 700 48px/1 'Open Sans', sans-serif;
-    color: #333333;
+    color: #333;
     margin: 0;
 }
 
@@ -149,14 +153,14 @@ body
     height: 6px;
     border-radius: 6px;
     background-color: #15a98c;
-    margin: 28px 0 43px;
+    margin: 28px 0 44px 1px;
 }
 
 .main_block
 {
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding-left: 22px;
     display: flex;
     flex-direction: row;
 }
@@ -166,23 +170,22 @@ body
     min-width: 330px;
     display: flex;
     flex-direction: column;
-    margin: 44px 0 0 0;
+    margin: 43px 0 0 0;
     position: relative;
     top: 160px;
-    left: 30px;
 }
 
 .green_header
 {
     font: 600 24px 'Open Sans';
     color: #15a98c;
-    margin: 0 0 12px;
+    margin: 0 0 13px;
 }
 
 .list_text
 {
-    font: 19px/1.9 'Georgia';
-    margin: 0 0 41px;
+    font: 19px/36px 'Georgia';
+    margin: 0 0 40px;
     color: #555555;
     padding-left: 19px;
 }
@@ -191,14 +194,14 @@ body
 {
     display: flex;
     flex-direction: column;
-    margin: 42px 0 0 89px;
+    margin: 41px 0 0 58px;
 }
 
 .dark_header
 {
-    font: 400 34px 'Open Sans';
-    color: #333333;
-    margin: 38px 0 13px;
+    font: 400 34px/46px 'Open Sans';
+    color: #333;
+    margin: 39px 0 13px;
     letter-spacing: 1.2px; /*если округлить, будет отличаться от макета*/
 }
 
@@ -211,7 +214,7 @@ body
 
 .info > .text:last-of-type
 {
-    margin-bottom: 49px;
+    margin-bottom: 47px;
 }
 
 .link
@@ -219,6 +222,7 @@ body
     font: 19px 'Georgia';
     color: #15a98c;
     position: relative;
+    margin-left: 1px;
 }
 
 .link:after
@@ -230,24 +234,25 @@ body
 
 .link:visited
 {
-    color: #000000;
+    color: #000;
 }
 
 .movie_block
 {
     margin: 66px auto 70px ;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 1200px;
+    padding-left: 23px;
 }
 
 .dark_header_movies
 {
-    font: 400 34px 'Open Sans';
-    color: #333333;
-    margin-bottom: 32px;
-    letter-spacing: 1.5px; /*если округлить, будет отличаться от макета*/
+    font: 400 34px/46px 'Open Sans';
+    color: #333;
+    margin: 29px 0 32px 0;
+    letter-spacing: 1.25px; /*если округлить, будет отличаться от макета*/
 }
 
 .cards
@@ -255,20 +260,19 @@ body
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 -20px;
+    justify-content: space-between;
 }
 
 .movie_card
 {
     width: 285px;
-    margin-left: 20px;
     padding: 0;
 }
 
 .movie_title
 {
     font: 700 22px/1.75 'Open Sans', sans-serif;
-    color: #333333;
+    color: #333;
     text-align: left;
     margin: 0 0 13px 0;
 }
@@ -276,7 +280,7 @@ body
 .movie_description
 {
     font: 16px/1.75 'Georgia';
-    color: #555555;
+    color: #555;
     margin: 0;
 }
 
@@ -290,26 +294,22 @@ body
 {
     margin: 82px auto 0;
     width: 220px;
-    height: 50px;
     border-radius: 5px;
     border: 0;
     cursor: pointer;
     background-color: #15a98c;
-    display: flex;
     position: relative;
     left: -11px;
+    color: #f5f5f5;
+    font: 19px 'Georgia';
+    line-height: 20px;
+    text-align: center;
+    padding: 15px 0 15px;
 }
 
 .movie_button:hover
 {
     background-color: #098d71;
-}
-
-.movie_button_name
-{
-    color: #f5f5f5;
-    font: 19px 'Georgia';
-    margin: auto;
 }
 
 .footer
@@ -323,6 +323,6 @@ body
 .footer_text
 {
     font: 16px 'Georgia';
-    color: #555555;
+    color: #555;
     margin: auto;
 }
