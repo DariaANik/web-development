@@ -25,7 +25,11 @@ function calc(expr) {
             isCorrectLength = false;
         }
     }
-    while ((isCalc) && (isCorrectExpr) && (isCorrectLength) && (expr.length > 2)) {
+    if ((!isCorrectExpr) || (!isCorrectLength)) {
+        console.log('Некорректный ввод.');
+        return;
+    }
+    while ((isCalc) && (expr.length > 2)) {
         isCalc = false; // флаг, производились ли вычисления в этом проходе
         for (let i = 0; i < expr.length - 2; i++) {
             let element = expr[i];
@@ -33,7 +37,7 @@ function calc(expr) {
                 let sign = element;
                 let n1 = Number(expr[i + 1]);
                 let n2 = Number(expr[i + 2]);
-                if (calcArithm(sign, n1, n2) !== 'divzero') {
+                if (!isNaN(calcArithm(sign, n1, n2))) {
                     expr[i] = calcArithm(sign, n1, n2);
                     expr.splice(i + 1, 2);
                     isCalc = true;
@@ -44,12 +48,8 @@ function calc(expr) {
             }
         }
     }
-    if ((isCalc) && (isCorrectExpr) && (isCorrectLength) && (expr.length === 1)) {
+    if ((isCalc) && (expr.length === 1)) {
         console.log('Результат', expr[0].toFixed(2));
-    } else if (!isCorrectExpr) {
-        console.log('Некорректные символы / некорректный порядок ввода значений.');
-    } else if (!isCorrectLength) {
-        console.log('Введите не меньше трех значений в формате знак число число.');
     } else {
         console.log('Ошибка вычислений. Некорректное выражение.');
     }
@@ -60,7 +60,7 @@ function calcArithm(sign, n1, n2) {
     if (sign === '*') return n1 * n2;
     if (sign === '/') {
         if (n2 === 0) {
-            return 'divzero'
+            return NaN
         } else {
             return n1 / n2;
         }
