@@ -43,7 +43,7 @@ function calc(expr) {
             }
         }
     }
-    if ((isCalc) && (isCorrectExpr) && (isCorrectLength) && (expr.length = 1)) {
+    if ((isCalc) && (isCorrectExpr) && (isCorrectLength) && (expr.length === 1)) {
         console.log('Результат', expr[0]);
     } else if (!isCorrectExpr) {
         console.log('Некорректные символы / некорректный порядок ввода значений.');
