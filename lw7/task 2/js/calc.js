@@ -32,7 +32,7 @@ function calc(expr) {
                 let sign = element;
                 let n1 = Number(expr[i + 1]);
                 let n2 = Number(expr[i + 2]);
-                if (calcArithm(sign, n1, n2)) {
+                if (calcArithm(sign, n1, n2) !== 'divzero') {
                     expr[i] = calcArithm(sign, n1, n2);
                     expr.splice(i + 1, 2);
                     isCalc = true;
@@ -59,7 +59,7 @@ function calcArithm(sign, n1, n2) {
     if (sign === '*') return n1 * n2;
     if (sign === '/') {
         if (n2 === 0) {
-            return false
+            return 'divzero'
         } else {
             return n1 / n2;
         }
