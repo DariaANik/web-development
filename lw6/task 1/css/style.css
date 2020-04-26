@@ -131,7 +131,7 @@ body
 .quote_text
 {
     font: 28px/1.47 'Georgia';
-    color: #ffffff;
+    color: #fff;
     font-style: italic;
     margin: 0;
     padding: 0;
@@ -190,7 +190,7 @@ body
 {
     font: 19px/36px 'Georgia';
     margin: 0 0 40px;
-    color: #555555;
+    color: #555;
     padding-left: 19px;
 }
 
@@ -213,7 +213,7 @@ body
 {
     font: 19px/1.69 "Georgia";
     margin: 0;
-    color: #555555;
+    color: #555;
 }
 
 .info > .text:last-of-type
@@ -335,7 +335,7 @@ body
 .form_title
 {
     font: 300 36px "Open Sans", sans-serif;
-    color: #333333;
+    color: #333;
     margin: 0;
     position: relative;
     left: 6px;
@@ -375,7 +375,7 @@ form
 .label
 {
     font: 400 20px 'Open Sans', sans-serif;
-    color: #333333;
+    color: #333;
     width: 540px;
     margin-bottom: 6px;
 }
@@ -387,7 +387,7 @@ form
     border: 2px solid #a6a6a6;
     border-radius: 2px;
     font: 400 18px "Open Sans", sans-serif;
-    color: #555555;
+    color: #555;
     padding: 0 18px 0;
     margin-bottom: 26px;
 }
