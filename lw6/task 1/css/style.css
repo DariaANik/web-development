@@ -247,7 +247,7 @@ body
 }
 .movie_block
 {
-    margin: 66px auto 41px ;
+    margin: 62px auto 41px ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -259,7 +259,7 @@ body
 {
     font: 400 34px/46px 'Open Sans';
     color: #333;
-    margin: 29px 0 32px 1px;
+    margin: 33px 0 32px 1px;
     letter-spacing: 1.25px; /*если округлить, будет отличаться от макета*/
 }
 
@@ -392,7 +392,8 @@ form
     margin-bottom: 26px;
 }
 
-.input_field:focus {
+.input_field:focus
+{
     border-color: #15a98c;
 }
 
@@ -415,6 +416,11 @@ form
     color: #555;
     padding: 0 12px 0;
     margin: 1px 0 43px;
+}
+
+.select_field:focus
+{
+    border-color: #15a98c;
 }
 
 .gender {
@@ -485,6 +491,11 @@ form
     font: 400 18px "Open Sans", sans-serif;
     color: #555;
     padding: 18px 18px 0;
+}
+
+.text_area:focus
+{
+    border-color: #15a98c;
 }
 
 .send_button {
