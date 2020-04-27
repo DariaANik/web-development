@@ -36,7 +36,7 @@ body
 {
     display: block;
     text-align: center;
-    padding: 13px 20px 11px 19px;
+    padding: 12px 20px 12px 19px;
     font: 19px 'Georgia';
     line-height: 26px;
     color: #333;
@@ -57,8 +57,10 @@ body
 .about:before
 {
     content: url('../images/about_me_icon.png');
-    line-height: 26px;
-    padding-right: 11px;
+    padding-right: 12px;
+    position: relative;
+    left: 1px;
+    top: 1px;
 }
 
 .about:hover:before
@@ -69,8 +71,9 @@ body
 .hobby:before
 {
     content: url('../images/hobby_icon.png');
-    line-height: 26px;
     padding-right: 11px;
+    position: relative;
+    top: 2px;
 }
 
 .hobby:hover:before
@@ -81,8 +84,9 @@ body
 .video:before
 {
     content: url('../images/video_icon.png');
-    line-height: 26px;
     padding-right: 11px;
+    position: relative;
+    top: 1px;
 }
 
 .video:hover:before
@@ -127,7 +131,7 @@ body
 .quote_text
 {
     font: 28px/1.47 'Georgia';
-    color: #ffffff;
+    color: #fff;
     font-style: italic;
     margin: 0;
     padding: 0;
@@ -160,7 +164,7 @@ body
 {
     max-width: 960px;
     margin: 0 auto;
-    padding-left: 22px;
+    padding-left: 24px;
     display: flex;
     flex-direction: row;
 }
@@ -186,7 +190,7 @@ body
 {
     font: 19px/36px 'Georgia';
     margin: 0 0 40px;
-    color: #555555;
+    color: #555;
     padding-left: 19px;
 }
 
@@ -209,7 +213,7 @@ body
 {
     font: 19px/1.69 "Georgia";
     margin: 0;
-    color: #555555;
+    color: #555;
 }
 
 .info > .text:last-of-type
@@ -237,9 +241,13 @@ body
     color: #000;
 }
 
+.movie_background
+{
+    background-color: #f9f9f9;
+}
 .movie_block
 {
-    margin: 66px auto 70px ;
+    margin: 62px auto 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -251,7 +259,7 @@ body
 {
     font: 400 34px/46px 'Open Sans';
     color: #333;
-    margin: 29px 0 32px 0;
+    margin: 33px 0 32px 1px;
     letter-spacing: 1.25px; /*если округлить, будет отличаться от макета*/
 }
 
@@ -274,7 +282,7 @@ body
     font: 700 22px/1.75 'Open Sans', sans-serif;
     color: #333;
     text-align: left;
-    margin: 0 0 13px 0;
+    margin: 0 0 14px 0;
 }
 
 .movie_description
@@ -286,20 +294,17 @@ body
 
 .movie_image
 {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     border-radius: 5px;
 }
 
-.movie_button
+.button
 {
-    margin: 82px auto 0;
     width: 220px;
     border-radius: 5px;
     border: 0;
     cursor: pointer;
     background-color: #15a98c;
-    position: relative;
-    left: -11px;
     color: #f5f5f5;
     font: 19px 'Georgia';
     line-height: 20px;
@@ -307,7 +312,14 @@ body
     padding: 15px 0 15px;
 }
 
-.movie_button:hover
+.movie_button
+{
+    margin: 82px auto 70px;
+    position: relative;
+    left: -10px;
+}
+
+.button:hover
 {
     background-color: #098d71;
 }
@@ -316,7 +328,7 @@ body
 {
     width: 100%;
     height: 70px;
-    background-color: #e8e8e8;
+    background-color: #f5f5f5;
     display: flex;
 }
 
