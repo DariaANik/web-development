@@ -4,7 +4,7 @@ const cardsShown = 4;
 function moveLeft() {
     let firstMovie = movieContainer.firstElementChild;
     let currentMovie = firstMovie.getElementsByTagName('h3')[0].innerText;
-    let currentPosition = moviesArr.findIndex(elem => elem.title == currentMovie); /* найти индекс по названию*/
+    let currentPosition = moviesArr.findIndex(elem => elem.title === currentMovie); /* найти индекс по названию*/
     let newCard = circleNumber(currentPosition + cardsShown);
     let lastMovie = movieContainer.lastElementChild;
     movieContainer.removeChild(firstMovie);
@@ -22,7 +22,7 @@ function moveLeft() {
 function moveRight() {
     let firstMovie = movieContainer.firstElementChild;
     let currentMovie = firstMovie.getElementsByTagName('h3')[0].innerText;
-    let currentPosition = moviesArr.findIndex(elem => elem.title == currentMovie); /* найти индекс по названию*/
+    let currentPosition = moviesArr.findIndex(elem => elem.title === currentMovie); /* найти индекс по названию*/
     let newCard = circleNumberReverse(currentPosition - 1);
     let lastMovie = movieContainer.lastElementChild;
     movieContainer.removeChild(lastMovie);
