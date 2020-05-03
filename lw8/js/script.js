@@ -1,11 +1,10 @@
-const movieContainer = document.getElementById('cards_container');
 const cardsShown = 4;
 
-function moveLeft() {
+function moveLeft(movieContainer) {
     let firstMovie = movieContainer.firstElementChild;
     let currentMovie = firstMovie.getElementsByTagName('h3')[0].innerText;
     let currentPosition = moviesArr.findIndex(elem => elem.title === currentMovie); /* найти индекс по названию*/
-    let newCard = circleNumber(currentPosition + cardsShown);
+    let newCard = (currentPosition + cardsShown) % moviesArr.length;
     let lastMovie = movieContainer.lastElementChild;
     movieContainer.removeChild(firstMovie);
     let newMovie = lastMovie.cloneNode(true);
@@ -19,11 +18,11 @@ function moveLeft() {
     movieContainer.appendChild(newMovie);
 }
 
-function moveRight() {
+function moveRight(movieContainer) {
     let firstMovie = movieContainer.firstElementChild;
     let currentMovie = firstMovie.getElementsByTagName('h3')[0].innerText;
     let currentPosition = moviesArr.findIndex(elem => elem.title === currentMovie); /* найти индекс по названию*/
-    let newCard = circleNumberReverse(currentPosition - 1);
+    let newCard = (moviesArr.length + (currentPosition - 1)) % moviesArr.length;
     let lastMovie = movieContainer.lastElementChild;
     movieContainer.removeChild(lastMovie);
     let newMovie = firstMovie.cloneNode(true);
@@ -37,27 +36,12 @@ function moveRight() {
     movieContainer.prepend(newMovie);
 }
 
-function circleNumber(num) {
-    if (num  >= moviesArr.length) {
-        return num - moviesArr.length;
-    } else {
-        return num;
-    }
-}
-
-function circleNumberReverse(num) {
-    if (num  < 0) {
-        return num + moviesArr.length;
-    } else {
-        return num;
-    }
-}
-
 function run() {
+    const movieContainer = document.getElementById('cards_container');
     const leftButton = document.getElementById('move_left');
-    leftButton.addEventListener("click", moveLeft);
+    leftButton.addEventListener("click", () => moveLeft(movieContainer));
     const rightButton = document.getElementById('move_right');
-    rightButton.addEventListener("click", moveRight);
+    rightButton.addEventListener("click", () => moveRight(movieContainer));
 }
 
 window.onload = run;
