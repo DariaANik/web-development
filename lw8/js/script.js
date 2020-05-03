@@ -1,10 +1,11 @@
 const movieContainer = document.getElementById('cards_container');
+const cardsShown = 4;
 
 function moveLeft() {
     let firstMovie = movieContainer.firstElementChild;
     let currentMovie = firstMovie.getElementsByTagName('h3')[0].innerText;
     let currentPosition = moviesArr.findIndex(elem => elem.title == currentMovie); /* найти индекс по названию*/
-    let newCard = circleNumber(currentPosition + 4);
+    let newCard = circleNumber(currentPosition + cardsShown);
     let lastMovie = movieContainer.lastElementChild;
     movieContainer.removeChild(firstMovie);
     let newMovie = lastMovie.cloneNode(true);
