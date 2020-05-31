@@ -6,6 +6,14 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <script defer>
+        function scrollTo() {
+            window.location.hash = "#<?=$args['hash'] ?? '' ?>";
+        }
+        <?php if (isset($args['save_message'])): ?>
+            scrollTo();
+        <?php endif;?>
+      </script>
   </head>
   <body>
     <header class="top_menu">
@@ -28,55 +36,55 @@
       </div>
     </div>
     <div class="main_block">
-    <div class="lists">
-      <div class="green_header">Любимые писатели:</div>
-      <ul class="list_text">
-        <li>Пелевин</li>
-        <li>Павич</li>
-        <li>Мураками</li>
-        <li>Сорокин</li>
-      </ul>
-      <div class="green_header">Любимые фильмы:</div>
-      <ol class="list_text">
-        <li>"Джокер"</li>
-        <li>"Джанго освобожденный"</li>
-        <li>"Сталкер"</li>
-        <li>"Собачье сердце"</li>
-      </ol>
+      <div class="lists">
+        <div class="green_header">Любимые писатели:</div>
+        <ul class="list_text">
+          <li>Пелевин</li>
+          <li>Павич</li>
+          <li>Мураками</li>
+          <li>Сорокин</li>
+        </ul>
+        <div class="green_header">Любимые фильмы:</div>
+        <ol class="list_text">
+          <li>"Джокер"</li>
+          <li>"Джанго освобожденный"</li>
+          <li>"Сталкер"</li>
+          <li>"Собачье сердце"</li>
+        </ol>
+      </div>
+      <div class="info">
+        <h1 class="main_header" id="about">Дарья Николаева</h1>
+        <div class="green_line"></div>
+        <p class="text">
+          Родилась в 1985 г. в Йошкар-Оле. Училась в лицее им. М.В. Ломоносова,
+          затем в 2002 г. поступила в МарГТУ на экономический факультет.
+          В настоящее время учусь в Институте программных систем.
+          Надо больше текста. Надо больше текста. Надо больше текста. Надо больше текста. Надо больше текста. Надо больше текста.
+        </p>
+        <h2 class="dark_header" id="hobby">Мое хобби</h2>
+        <p class="text">
+          В свободное время люблю читать книги, смотреть фильмы и сериалы. Из активного отдыха выбираю прогулки,
+          спорт (тренажерный зал, бассейн). Отпуск предпочитаю проводить за пределами родного города, чаще выбираю культурный туризм, чем пляжный отдых.
+        </p>
+        <a href="https://vk.com/mysecretdairy" class="link" title="Дарья Николаева в VK">Напиши мне</a>
+      </div>
     </div>
-    <div class="info">
-      <h1 class="main_header" id="about">Дарья Николаева</h1>
-      <div class="green_line"></div>
-      <p class="text">
-        Родилась в 1985 г. в Йошкар-Оле. Училась в лицее им. М.В. Ломоносова,
-        затем в 2002 г. поступила в МарГТУ на экономический факультет.
-        В настоящее время учусь в Институте программных систем.
-        Надо больше текста. Надо больше текста. Надо больше текста. Надо больше текста. Надо больше текста. Надо больше текста.
-      </p>
-      <h2 class="dark_header" id="hobby">Мое хобби</h2>
-      <p class="text">
-        В свободное время люблю читать книги, смотреть фильмы и сериалы. Из активного отдыха выбираю прогулки,
-        спорт (тренажерный зал, бассейн). Отпуск предпочитаю проводить за пределами родного города, чаще выбираю культурный туризм, чем пляжный отдых.
-      </p>
-      <a href="https://vk.com/mysecretdairy" class="link" title="Дарья Николаева в VK">Напиши мне</a>
-    </div>
-  </div>
-  <div class="movie_background">
-    <div class="carousel">
-      <button id="move_left" class="left_button"><svg width="70px" height="70px" class="arrow_svg"><polyline points="40,19 23,36 37,52" class="arrow"/></svg></button>
-      <button id="move_right" class="right_button"><svg width="70px" height="70px" class="arrow_svg"><polyline points="28,19 45,36 31,52" class="arrow"/></svg></button>
-      <div class="movie_block">
-        <h2 class="dark_header_movies" id="movies">Любимые фильмы</h2>
-        <div class="cards" id="cards_container">
-          <div class="movie_card">
-            <img src="images/joker.jpg" class="movie_image" alt="Кадр из фильма Джокер">
-            <h3 class="movie_title">Джокер</h3>
-            <p class="movie_description">
-              Готэм, начало 1980-х годов. Комик Артур Флек живет с больной матерью,
-              которая с детства учит его «ходить с улыбкой». Пытаясь нести в мир хорошее и дарить людям радость,
-              Артур сталкивается с человеческой жестокостью и постепенно приходит к выводу, что этот мир получит
-              от него не добрую улыбку, а ухмылку злодея Джокера.
-            </p>
+    <div class="movie_background">
+      <div class="carousel">
+        <button id="move_left" class="left_button"><svg width="70px" height="70px" class="arrow_svg"><polyline points="40,19 23,36 37,52" class="arrow"/></svg></button>
+        <button id="move_right" class="right_button"><svg width="70px" height="70px" class="arrow_svg"><polyline points="28,19 45,36 31,52" class="arrow"/></svg></button>
+        <div class="movie_block">
+          <h2 class="dark_header_movies" id="movies">Любимые фильмы</h2>
+          <div class="cards" id="cards_container">
+            <div class="movie_card">
+              <img src="images/joker.jpg" class="movie_image" alt="Кадр из фильма Джокер">
+              <h3 class="movie_title">Джокер</h3>
+              <p class="movie_description">
+                Готэм, начало 1980-х годов. Комик Артур Флек живет с больной матерью,
+                которая с детства учит его «ходить с улыбкой». Пытаясь нести в мир хорошее и дарить людям радость,
+                Артур сталкивается с человеческой жестокостью и постепенно приходит к выводу, что этот мир получит
+                от него не добрую улыбку, а ухмылку злодея Джокера.
+              </p>
             </div>
             <div class="movie_card">
               <img src="images/django.jpg" class="movie_image" alt="Кадр из фильма Джанго освобожденный">
@@ -146,7 +154,7 @@
       <textarea name="message" class="text_area" id="message" maxlength="500" required><?=$args['message'] ?? ''; ?></textarea>
       <input type="submit" value="Отправить" class="button send_button" />
       <?php if (isset($args['save_message'])): ?>
-        <p class="label"><?php echo $args['save_message']; ?></p>
+        <p name="savemsg" class="label"><?php echo $args['save_message']; ?></p>
       <?php endif; ?>
     </form>
     <footer class="footer">
