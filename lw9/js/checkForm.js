@@ -26,7 +26,9 @@ function resultProcess(formResult) {
 }
 
 async function checkForm(event) {
-    event.preventDefault();
+    if (event.cancelable) {
+        event.preventDefault();
+    }
     const result = await validate();
     resultProcess(result);
 }
