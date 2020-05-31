@@ -27,20 +27,24 @@ function saveFeedbackPage(): void
             'message' => null
         ];
         $args['save_message'] = 'Сообщение сохранено';
+        $args['hash'] = 'message';
     }
     else
     {
         $args = $_POST;
         $args['save_message'] = 'Сообщение не сохранено';
+        $args['hash'] = 'message';
         if (!checkEmail($email))
         {
             $args['email_error'] = 'error_field';
             $args['email'] = null;
+            $args['hash'] = 'email';
         }
         if (!checkName($name))
         {
             $args['name_error'] = 'error_field';
             $args['name'] = null;
+            $args['hash'] = 'name';
         }
     }
     renderTemplate('main.tpl.php', $args);
