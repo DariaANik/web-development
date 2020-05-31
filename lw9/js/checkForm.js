@@ -7,8 +7,6 @@ function resultProcess(formResult) {
     const nameField = document.getElementById('name');
     const resultMessage = document.getElementById('result');
     const form = document.getElementById('form');
-    alert('email ' + formResult['email']); //убери потом
-    alert('name ' + formResult['name']);
     if (formResult['email'] == 'error') {
         emailField.classList.add('error_field');
         emailField.value = '';
