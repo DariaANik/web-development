@@ -1,5 +1,11 @@
-function removeError(field) {
-    field.classList.remove('error_field');
+function errorProcess(field, resultMessage) {
+    field.classList.add('error_field');
+    field.value = '';
+    field.addEventListener('change', function removeFunction(event) {
+        this.removeEventListener('change', removeFunction);
+        this.classList.remove('error_field');
+    });
+    resultMessage.classList.add('hidden');
 }
 
 function resultProcess(formResult) {
@@ -8,16 +14,10 @@ function resultProcess(formResult) {
     const resultMessage = document.getElementById('result');
     const form = document.getElementById('form');
     if (formResult['email'] == 'error') {
-        emailField.classList.add('error_field');
-        emailField.value = '';
-        emailField.addEventListener('change', () => removeError(emailField));
-        resultMessage.classList.add('hidden');
+        errorProcess(emailField, resultMessage);
     }
     if (formResult['name'] == 'error') {
-        nameField.classList.add('error_field');
-        nameField.value = '';
-        nameField.addEventListener('change', () => removeError(nameField));
-        resultMessage.classList.add('hidden');
+        errorProcess(nameField, resultMessage);
     }
     if ((formResult['name'] == 'correct') && (formResult['email'] == 'correct')) {
         resultMessage.classList.remove('hidden');
@@ -38,23 +38,21 @@ async function validate() {
         'email': document.getElementById('email').value,
         'name': document.getElementById('name').value
     };
-    const result = fetch(`check_data.php`,
-        {
+    const result = fetch(`check_data.php`, {
                 method: 'POST',
-                headers:
-                    {
-                        'Content-Type': 'application/json'
-                    },
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(formInfo)
             })
-        .then(successResponse => successResponse.status == 200
-            ? successResponse.json() // читаем как json
-            : console.log('not ok')
-        );
+            .then(successResponse => successResponse.status == 200
+                ? successResponse.json()
+                : console.log('not ok')
+            );
     return await result;
 }
 
-async function run() {
+function run() {
     const sendButton = document.getElementById('form');
     sendButton.addEventListener("submit", checkForm);
 }

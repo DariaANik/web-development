@@ -15,14 +15,16 @@ $form = json_decode($form, true);
 $result = [];
 $email = $form['email'] ?? '';
 $name = $form['name'] ?? '';
-if (checkEmail($email)) {
+if (checkEmail($email))
+{
     $result['email'] = 'correct';
 }
 else
 {
     $result['email'] = 'error';
 }
-if (checkName($name)) {
+if (checkName($name))
+{
     $result['name'] = 'correct';
 }
 else
