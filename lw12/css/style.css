@@ -1,0 +1,1231 @@
+body
+{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.nav_bar
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav_bar_button, .nav_bar_button:visited
+{
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 12px 0 12px 2em;
+    font: 18px 'Georgia';
+    line-height: 26px;
+    color: #333;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.nav_bar_button:active
+{
+    background: #15a98c;
+    color: #f5f5f5;
+}
+
+
+.about:before
+{
+    content: url('../images/about_me_icon.png');
+    padding-right: 12px;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+.about:active:before
+{
+    content: url('../images/about_me_icon_hover.png');
+}
+
+.hobby:before
+{
+    content: url('../images/hobby_icon.png');
+    padding-right: 11px;
+    position: relative;
+    top: 2px;
+}
+
+.hobby:active:before
+{
+    content: url('../images/hobby_icon_hover.png');
+}
+
+.video:before
+{
+    content: url('../images/video_icon.png');
+    padding-right: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.video:active:before
+{
+    content: url('../images/video_icon_hover.png');
+}
+
+
+.background
+{
+    background: url("../images/background.png") no-repeat top center;
+}
+
+.intro
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.photo
+{
+    order: 1;
+    margin: 0.5em 0 0 0;
+    flex: none;
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+    align-self: center;
+}
+
+.quote
+{
+    order: 2;
+    width: 100%;
+    margin: 1.5em 0 0 0;
+}
+
+.quote_text
+{
+    font: 20px/1.4 'Georgia';
+    color: #fff;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+.author
+{
+    font: 600 16px/1.4 'Open Sans', sans-serif;
+    color: #f5f5f5;
+    padding-left: 5px;
+}
+
+.main_header
+{
+    font: 700 48px/1 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.green_line
+{
+    width: 60px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #15a98c;
+    margin: 1.5em 0 1.5em;
+}
+
+.main_block
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.lists
+{
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 0.7em;
+}
+
+.info
+{
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 0 0;
+}
+
+.green_header
+{
+    font: 600 24px 'Open Sans';
+    color: #15a98c;
+    margin: 0 0 13px;
+}
+
+.list_text
+{
+    font: 16px/1.89 'Georgia';
+    margin: 0 0 1.3em;
+    color: #555;
+    padding-left: 19px;
+}
+
+.dark_header
+{
+    font: 400 34px/46px 'Open Sans';
+    color: #333;
+    margin: 39px 0 13px;
+    letter-spacing: 1.2px; /*если округлить, будет отличаться от макета*/
+}
+
+.text
+{
+    font: 16px/1.69 "Georgia";
+    margin: 0;
+    color: #555;
+}
+
+.info > .text:last-of-type
+{
+    margin-bottom: 47px;
+}
+
+.link
+{
+    font: 16px 'Georgia';
+    color: #15a98c;
+    position: relative;
+    margin-left: 1px;
+}
+
+.link:after
+{
+    content: "→";
+    position: absolute;
+    left: 100px;
+}
+
+.link:visited
+{
+    color: #000;
+}
+
+.movie_background
+{
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.movie_block
+{
+    margin: 0 auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.dark_header_movies
+{
+    font: 400 30px/1.35 'Open Sans';
+    color: #333;
+    margin: 1em 0 1em;
+    letter-spacing: 1.25px; /*если округлить, будет отличаться от макета*/
+}
+
+.cards
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.movie_card
+{
+    width: 100%;
+    max-width: 385px;
+    padding: 0;
+}
+
+.movie_title
+{
+    font: 700 22px/1.75 'Open Sans', sans-serif;
+    color: #333;
+    text-align: left;
+    margin: 0.4em 0 0.4em;
+}
+
+.movie_description
+{
+    font: 16px/1.75 'Georgia';
+    color: #555;
+    margin: 0 0 3em;
+}
+
+.movie_image
+{
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.button
+{
+    width: 190px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: #15a98c;
+    color: #f5f5f5;
+    font: 16px 'Georgia';
+    line-height: 18px;
+    text-align: center;
+    padding: 15px 0 15px;
+}
+
+.movie_button
+{
+    margin: 0 auto 3em;
+}
+
+.button:active
+{
+    background-color: #098d71;
+}
+
+.form_header
+{
+    display: flex;
+    justify-content: center;
+}
+
+.form_title
+{
+    font: 300 2.25em "Open Sans", sans-serif;
+    color: #333;
+    margin: 0;
+    position: relative;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+    margin: 1.3em auto 0;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.label
+{
+    font: 400 1.1em 'Open Sans', sans-serif;
+    color: #333;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.input_field
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 3em;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+    font: 400 1em "Open Sans", sans-serif;
+    color: #555;
+    padding: 0 18px 0;
+    margin-bottom: 1.3em;
+}
+
+.input_field:focus
+{
+    border-color: #15a98c;
+}
+
+.select_field
+{
+    -webkit-appearance: none; /* Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none;
+    background: url('../images/arrow_down.png') no-repeat;
+    width: 100%;
+    height: 3em;
+    background-position-y: 53%;
+    background-position-x: 97%;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+    font: 400 1em "Open Sans", sans-serif;
+    color: #555;
+    padding: 0 12px 0;
+    margin: 1px 0 1.3em;
+}
+
+.select_field:focus
+{
+    border-color: #15a98c;
+}
+
+.gender
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    margin-bottom: 1.3em;
+}
+
+.label_gender
+{
+    margin-bottom: 11px;
+}
+
+.radio_input
+{
+    -webkit-appearance: none; /* Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* убираем стандартные кружочки */
+    position: absolute;
+    margin: 0;
+}
+
+.radio_input:before
+{
+    content: ' ';
+    position: absolute;
+    top: 4px;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid #a8a8a8;
+    background-color: #dedede;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+.radio_input:checked:after
+{
+    content: ' ';
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    z-index: 2;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #666;
+}
+
+.radio_text
+{
+    font: 400 1em "Open Sans", sans-serif;
+    color: #555;
+    margin: 0 40px 0 22px;
+}
+
+.radio_text_f
+{
+    margin-left: 21px;
+}
+
+.message_header
+{
+    margin-bottom: 5px;
+}
+
+.text_area
+{
+    box-sizing: border-box;
+    height: 8.35em;
+    width: 100%;
+    resize: none;
+    border: 2px solid #a6a6a6;
+    border-radius: 2px;
+    font: 400 0.9em "Open Sans", sans-serif;
+    color: #555;
+    padding: 0.9em 0.9em 0;
+}
+
+.text_area:focus
+{
+    border-color: #15a98c;
+}
+
+.send_button
+{
+    margin: 2em 0 2em;
+}
+
+.required:after
+{
+    color: #ff0000;
+    content: ' *';
+}
+
+.footer
+{
+    width: 100%;
+    height: 4.375em;
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+.footer_text
+{
+    font: 1em 'Georgia';
+    margin: auto;
+    color: #555;
+}
+
+
+@media screen and (min-width: 480px)
+{
+    body
+    {
+        font-size: 16px;
+    }
+    
+    .top_menu
+    {
+        display: flex;
+        width: 100%;
+    }
+    
+    .nav_bar
+    {
+        flex-direction: row;
+    }
+    
+    .grow_one
+    {
+        flex-grow: 1;
+    }
+    
+    .grow_two
+    {
+        flex-grow: 2;
+    }
+    
+    .nav_bar_button, .nav_bar_button:visited
+    {
+        text-align: center;
+        padding: 12px 0 12px;
+    }
+    
+    .intro
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .photo
+    {
+        margin: 0;
+        flex: none;
+        border-radius: 5px;
+        position: relative;
+        bottom: -3em;
+        width: 45%;
+        max-width: 330px;
+        height: auto;
+        align-self: center;
+    }
+    
+    .quote
+    {
+        width: 50%;
+        margin: 3em 0 0 0;
+    }
+    
+    
+    .main_block
+    {
+        margin-top: 3em;
+    }
+    
+    .movie_block
+    {
+        align-items: flex-start;
+        max-width: 385px;
+        
+    }
+    
+    .button
+    {
+        width: 220px;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        background-color: #15a98c;
+        color: #f5f5f5;
+        font: 19px 'Georgia';
+        line-height: 20px;
+        text-align: center;
+        padding: 15px 0 15px;
+    }
+    
+    .movie_button
+    {
+        margin: 0 auto 3em;
+    }
+    
+    .form_title:before
+    {
+        content: '';
+        width: 100px;
+        height: 1px;
+        background-color: #c4c4c4;
+        display: inline-block;
+        position: absolute;
+        left: -110px;
+        bottom: 23px;
+    }
+    
+    .form_title:after
+    {
+        content: '';
+        width: 100px;
+        height: 1px;
+        background-color: #c4c4c4;
+        display: inline-block;
+        position: absolute;
+        right: -110px;
+        bottom: 23px;
+    }
+    
+    .form
+    {
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        width: 90%;
+        padding: 0;
+    }
+    
+    .label
+    {
+        font: 400 20px 'Open Sans', sans-serif;
+        color: #333;
+        max-width: 540px;
+        margin-bottom: 6px;
+    }
+    
+    .input_field
+    {
+        max-width: 540px;
+        height: 50px;
+        border: 2px solid #a6a6a6;
+        border-radius: 2px;
+        font: 400 18px "Open Sans", sans-serif;
+        color: #555;
+        padding: 0 18px 0;
+        margin-bottom: 26px;
+    }
+    
+    .input_field:focus
+    {
+        border-color: #15a98c;
+    }
+    
+    .select_field
+    {
+        max-width: 540px;
+        height: 50px;
+        border: 2px solid #a6a6a6;
+        border-radius: 2px;
+        font: 400 18px "Open Sans", sans-serif;
+        color: #555;
+        padding: 0 12px 0;
+        margin: 0 0 26px;
+    }
+    
+    .select_field:focus
+    {
+        border-color: #15a98c;
+    }
+    
+    .gender
+    {
+        display: inline-block;
+        font-size: 0;
+        margin-bottom: 26px;
+    }
+    
+    .label_gender
+    {
+        margin-bottom: 11px;
+    }
+    
+    .radio_input
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+        margin: 0;
+    }
+    
+    .radio_input:before
+    {
+        content: ' ';
+        position: absolute;
+        top: 7px;
+        z-index: 1;
+        border-radius: 10px;
+        border: 1px solid #a8a8a8;
+        background-color: #dedede;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+    }
+    
+    .radio_input:checked:after
+    {
+        content: ' ';
+        position: absolute;
+        top: 10px;
+        left: 3px;
+        z-index: 2;
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background-color: #666;
+    }
+    
+    .radio_text
+    {
+        font: 400 18px "Open Sans", sans-serif;
+        color: #555;
+        margin: 0 40px 0 22px;
+    }
+    
+    .radio_text_f
+    {
+        margin-left: 21px;
+    }
+    
+    .message_header
+    {
+        margin-bottom: 5px;
+    }
+    
+    .text_area
+    {
+        height: 150px;
+        max-width: 540px;
+        width: 100%;
+        resize: none;
+        border: 2px solid #a6a6a6;
+        border-radius: 2px;
+        font: 400 18px "Open Sans", sans-serif;
+        color: #555;
+        padding: 18px 18px 0;
+    }
+    
+    .text_area:focus
+    {
+        border-color: #15a98c;
+    }
+    
+    .send_button
+    {
+        margin: 48px 0 48px;
+    }
+    
+    .required:after
+    {
+        color: #ff0000;
+        content: ' *';
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .top_menu
+    {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    .nav_bar_menu
+    {
+        flex-grow: 0;
+    }
+    
+    .nav_bar_button, .nav_bar_button:visited
+    {
+        display: block;
+        text-align: center;
+        padding: 12px 20px 12px 19px;
+        font: 19px 'Georgia';
+        line-height: 26px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .nav_bar_button:active
+    {
+        background: #15a98c;
+        color: #f5f5f5;
+    }
+    
+    
+    .photo
+    {
+        margin: 0;
+        border-radius: 5px;
+        position: relative;
+        bottom: -7em;
+        width: 40%;
+        max-width: 330px;
+        height: auto;
+        align-self: center;
+    }
+    
+    .quote
+    {
+        width: 50%;
+        margin: 7em 0 0 0;
+    }
+    
+    .quote_text
+    {
+        font-size: 22px;
+    }
+    
+    
+    .main_block
+    {
+        max-width: 960px;
+        margin: 0 auto 2em;
+        padding-left: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .lists
+    {
+        order: 1;
+        max-width: 330px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        position: relative;
+        top: 8em;
+    }
+    
+    .info
+    {
+        order: 2;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0 0;
+    }
+    
+    .movie_block
+    {
+        width: 90%;
+        max-width: 855px;
+    }
+    
+    .cards
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .movie_card
+    {
+        width: 47%;
+        max-width: 385px;
+    }
+    
+    .form_title:before
+    {
+        content: '';
+        width: 200px;
+        height: 1px;
+        background-color: #c4c4c4;
+        display: inline-block;
+        position: absolute;
+        left: -227px;
+        bottom: 23px;
+    }
+    
+    .form_title:after
+    {
+        content: '';
+        width: 200px;
+        height: 1px;
+        background-color: #c4c4c4;
+        display: inline-block;
+        position: absolute;
+        right: -224px;
+        bottom: 23px;
+    }
+}
+
+
+@media screen and (min-width: 1024px)
+{
+    
+    
+    .quote_text
+    {
+        font: 28px/1.47 'Georgia';
+        font-style: italic;
+    }
+    
+    .movie_block
+    {
+        max-width: 960px;
+    }
+    
+}
+
+@media screen and (min-width: 1366px)
+{
+    body
+    {
+        box-sizing: content-box;
+    }
+    
+    .nav_bar
+    {
+        position: relative;
+        left: 12px;
+    }
+    
+    
+    .nav_bar_button, .nav_bar_button:visited
+    {
+        display: block;
+        text-align: center;
+        padding: 12px 20px 12px 19px;
+        font: 19px 'Georgia';
+        line-height: 26px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .nav_bar_button:hover
+    {
+        background: #15a98c;
+        color: #f5f5f5;
+    }
+    
+    .hobby
+    {
+        padding-left: 21px;
+    }
+    
+    .about:before
+    {
+        content: url('../images/about_me_icon.png');
+        padding-right: 12px;
+        position: relative;
+        left: 1px;
+        top: 1px;
+    }
+    
+    .about:hover:before
+    {
+        content: url('../images/about_me_icon_hover.png');
+    }
+    
+    .hobby:before
+    {
+        content: url('../images/hobby_icon.png');
+        padding-right: 11px;
+        position: relative;
+        top: 2px;
+    }
+    
+    .hobby:hover:before
+    {
+        content: url('../images/hobby_icon_hover.png');
+    }
+    
+    .video:before
+    {
+        content: url('../images/video_icon.png');
+        padding-right: 11px;
+        position: relative;
+        top: 1px;
+    }
+    
+    .video:hover:before
+    {
+        content: url('../images/video_icon_hover.png');
+    }
+    
+    .intro
+    {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding-left: 23px;
+    }
+    
+    .photo
+    {
+        margin: 0 60px 0 0;
+        flex: none;
+        border-radius: 5px;
+        position: relative;
+        bottom: -185px;
+        width: 330px;
+        height: 350px;
+        align-self: center;
+    }
+    
+    .quote
+    {
+        max-width: 570px;
+        width: 60%;
+        margin: 234px 0 43px 0;
+    }
+    
+    .author
+    {
+        font: 600 16px/1.47 'Open Sans', sans-serif;
+        color: #f5f5f5;
+        padding-left: 5px;
+    }
+    
+    .main_header
+    {
+        font: 700 48px/1 'Open Sans', sans-serif;
+        color: #333;
+        margin: 0;
+    }
+    
+    .green_line
+    {
+        width: 60px;
+        height: 6px;
+        border-radius: 6px;
+        background-color: #15a98c;
+        margin: 28px 0 44px 1px;
+    }
+    
+    .main_block
+    {
+        max-width: 960px;
+        margin: 0 auto;
+        padding-left: 24px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .lists
+    {
+        width: 34%;
+        display: flex;
+        flex-direction: column;
+        margin: 43px 0 0;
+        position: relative;
+        top: 160px;
+    }
+    
+    .green_header
+    {
+        font: 600 24px 'Open Sans';
+        color: #15a98c;
+        margin: 0 0 13px;
+    }
+    
+    .list_text
+    {
+        font: 19px/36px 'Georgia';
+        margin: 0 0 40px;
+        color: #555;
+        padding-left: 19px;
+    }
+    
+    .info
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 41px 0 0;
+        width: 59.5%;
+    }
+    
+    .dark_header
+    {
+        font: 400 34px/46px 'Open Sans';
+        color: #333;
+        margin: 39px 0 13px;
+        letter-spacing: 1.2px; /*если округлить, будет отличаться от макета*/
+    }
+    
+    .text
+    {
+        font: 19px/1.69 "Georgia";
+        margin: 0;
+        color: #555;
+    }
+    
+    .info > .text:last-of-type
+    {
+        margin-bottom: 47px;
+    }
+    
+    .link
+    {
+        font: 19px 'Georgia';
+        color: #15a98c;
+        position: relative;
+        margin-left: 1px;
+    }
+    
+    .link:after
+    {
+        content: "→";
+        position: absolute;
+        left: 120px;
+    }
+    
+    .link:visited
+    {
+        color: #000;
+    }
+    
+    .movie_background
+    {
+        background-color: #f9f9f9;
+    }
+    
+    .movie_block
+    {
+        margin: 62px auto 41px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding-left: 23px;
+    }
+    
+    .dark_header_movies
+    {
+        font: 400 34px/46px 'Open Sans';
+        color: #333;
+        margin: 33px 0 32px 1px;
+        letter-spacing: 1.25px; /*если округлить, будет отличаться от макета*/
+    }
+    
+    .cards
+    {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .movie_card
+    {
+        max-width: 285px;
+        padding: 0;
+    }
+    
+    .movie_title
+    {
+        font: 700 22px/1.75 'Open Sans', sans-serif;
+        color: #333;
+        text-align: left;
+        margin: 0 0 14px 0;
+    }
+    
+    .movie_description
+    {
+        font: 16px/1.75 'Georgia';
+        color: #555;
+        margin: 0;
+    }
+    
+    .movie_image
+    {
+        margin-bottom: 16px;
+        border-radius: 5px;
+    }
+    
+    .movie_button
+    {
+        margin: 82px auto 60px;
+        position: relative;
+        left: -10px;
+    }
+    
+    .button:hover
+    {
+        background-color: #098d71;
+    }
+    
+    .form_header
+    {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .form_title
+    {
+        font: 300 36px "Open Sans", sans-serif;
+        color: #333;
+        margin: 0;
+        position: relative;
+        left: 6px;
+    }
+    
+    .form
+    {
+        margin: 0 auto 0;
+        position: relative;
+        left: 10px;
+        padding: 67px 0 0;
+    }
+    
+    .input_field:nth-of-type(2)
+    {
+        margin-bottom: 27px;
+    }
+    
+    .select_field
+    {
+        margin: 1px 0 43px;
+    }
+    
+    .gender
+    {
+        display: inline-block;
+        font-size: 0;
+        margin-bottom: 42px;
+    }
+    
+    .label_gender
+    {
+        margin-bottom: 11px;
+    }
+}
